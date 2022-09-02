@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  php:
+    # Build PHP image with Xdebug enabled
+    build:
+      context: .
+      dockerfile: php.prod.dockerfile
+      args:
+        PHP_VERSION: ${PHP_VERSION}
+    volumes:
+      - ./php/conf.d/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.prod.dockerfile
+      args:
+        NGINX_VERSION: ${NGINX_VERSION}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./src:/var/www/html

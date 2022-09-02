@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Meliodas" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+    <deployment type="docker-compose.yml">
+      <settings>
+        <option name="composeProjectName" value="Meliodas" />
+        <option name="envFilePath" value="$PROJECT_DIR$/.env" />
+        <option name="removeImagesOnComposeDown" value="ALL" />
+        <option name="secondarySourceFiles">
+          <list>
+            <option value="docker-compose.dev.yml" />
+          </list>
+        </option>
+        <option name="services">
+          <list>
+            <option value="nginx" />
+            <option value="mysql" />
+            <option value="php" />
+          </list>
+        </option>
+        <option name="sourceFilePath" value="docker-compose.yml" />
+        <option name="upDetach" value="false" />
+        <option name="upRemoveOrphans" value="true" />
+        <option name="upRenewAnonVolumes" value="true" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

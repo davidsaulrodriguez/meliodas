@@ -1,0 +1,11 @@
+<component name="CopyrightManager">
+  <settings default="Default">
+    <module2copyright>
+      <element module="All" copyright="Default" />
+    </module2copyright>
+    <LanguageOptions name="PHP">
+      <option name="fileTypeOverride" value="3" />
+      <option name="lenBefore" value="1" />
+    </LanguageOptions>
+  </settings>
+</component>
